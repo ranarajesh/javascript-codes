@@ -78,3 +78,8 @@ Promise.all(promArr)
 
 console.log("it will call before promise");
 
+
+// Promise with race method 
+
+Promise.race(promArr)
+.then(raceItem => console.log("value of race item is", raceItem))
