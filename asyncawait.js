@@ -51,3 +51,22 @@ const func = async function(){
 }
 
 func()
+
+const trueParallel = async function(){
+    const result = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+          console.log('timeout3 for 1 seconds');
+          resolve('done');
+        }, 1000);
+      }).then(v => console.log(`1st call result ${v}`));
+      const result2 = new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+          console.log('timeout3 for 1 seconds');
+          resolve('done');
+        }, 1000);
+      }).then(v => console.log(`2nd call result ${v}`));;
+
+      
+}
+
+trueParallel()
